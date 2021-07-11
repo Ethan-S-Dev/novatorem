@@ -94,7 +94,7 @@ def getTemplate():
         tempFileName = templates["templates"][templates["current-theme"]]
         print(tempFileName)
         return tempFileName
-    except Exeption as e:
+    except Exception as e:
         print(f"Failed to load templates.")
         print(e)
         print(os.listdir('.'))
