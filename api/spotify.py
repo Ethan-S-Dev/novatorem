@@ -88,8 +88,12 @@ def getTemplate():
     try:
         file = open("templates.json","r")
         templates = json.load(file)
-        return templates["templates"][templates["current-theme"]]
+        print(templates)
+        tempFileName = templates["templates"][templates["current-theme"]]
+        print(tempFileName)
+        return tempFileName
     except:
+        print("Failed to load templates")
         return FALLBACK_THEME
 
 
