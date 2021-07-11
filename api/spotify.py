@@ -88,8 +88,7 @@ def getTemplate():
     try:
         print("start loading templates.")
         file = open("api/templates.json","r")
-        print(file.read())
-        templates = json.load(file)
+        templates = json.loads(file.read())
         print(templates)
         tempFileName = templates["templates"][templates["current-theme"]]
         print(tempFileName)
