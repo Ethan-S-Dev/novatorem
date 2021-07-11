@@ -94,8 +94,9 @@ def getTemplate():
         tempFileName = templates["templates"][templates["current-theme"]]
         print(tempFileName)
         return tempFileName
-    except:
-        print("Failed to load templates")
+    except Exeption as e:
+        print(f"Failed to load templates.")
+        print(e)
         return FALLBACK_THEME
 
 
