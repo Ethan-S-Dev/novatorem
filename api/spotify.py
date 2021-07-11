@@ -97,6 +97,7 @@ def getTemplate():
     except Exeption as e:
         print(f"Failed to load templates.")
         print(e)
+        print(os.listdir('.'))
         return FALLBACK_THEME
 
 
