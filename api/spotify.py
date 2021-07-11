@@ -86,7 +86,9 @@ def barGen(barCount):
 
 def getTemplate():
     try:
+        print("start loading templates.")
         file = open("templates.json","r")
+        print(file.read())
         templates = json.load(file)
         print(templates)
         tempFileName = templates["templates"][templates["current-theme"]]
